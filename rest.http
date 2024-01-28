@@ -1,0 +1,113 @@
+http://localhost:8080/admin/metrics
+
+
+###
+
+GET http://localhost:8080/api/chirps
+
+###
+
+GET http://localhost:8080/api/chirps/3
+
+###
+
+POST http://localhost:8080/api/chirps HTTP/1.1
+Content-Type: application/json
+
+{
+  "body": "I had something interesting for breakfast2"
+}
+
+###
+
+POST http://localhost:8080/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "jerry@example.com",
+  "password": "123456"
+}
+
+###
+
+
+POST http://localhost:8080/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "jerry@example.com",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:8080/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "jerry@example.com",
+  "password": "123"
+}
+
+###
+
+
+PUT http://localhost:8080/api/users HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjaGlycHkiLCJzdWIiOiIxIiwiZXhwIjoxNzA2NDI0MzYzLCJpYXQiOjE3MDY0MjQxNjN9.oS3aLBXps_8yFcNmYiW8_9g6qBr54nnfpXTYRkXKO4U
+
+{
+  "email": "jerry@example.com",
+  "password": "123"
+}
+
+###
+
+
+POST http://localhost:8080/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "jerry@example.com",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:8080/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "jerry@example.com",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:8080/api/revoke HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjaGlycHkiLCJzdWIiOiIxIiwiZXhwIjoxNzA2NDI0MzYzLCJpYXQiOjE3MDY0MjQxNjN9.oS3aLBXps_8yFcNmYiW8_9g6qBr54nnfpXTYRkXKO4U
+
+###
+
+POST http://localhost:8080/api/polka/webhooks
+Content-Type: application/json
+
+{
+  "data": {
+    "user_id": 2
+  },
+  "event": "user.payment_failed"
+}
+
+###
+
+POST http://localhost:8080/api/polka/webhooks
+Content-Type: application/json
+Authorization: ApiKey f271c81ff7084ee5b99a5091b42d486e
+
+{
+  "data": {
+    "user_id": 2
+  },
+  "event": "user.upgraded"
+}
